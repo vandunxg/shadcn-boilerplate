@@ -1,25 +1,33 @@
 {
-  "extends": "./tsconfig.json",
-  "compilerOptions": {
-    "moduleResolution": "bundler",
-    "jsx": "react-jsx",
-    "allowJs": false,
-    "noEmit": true,
-    "resolveJsonModule": true,
-    "isolatedModules": true,
-    "strict": true,
-    "skipLibCheck": true,
+    "extends": "./tsconfig.json",
+    "compilerOptions": {
+        "target": "ESNext",
+        "lib": ["DOM", "DOM.Iterable", "ESNext"],
+        "module": "ESNext",
+        "moduleResolution": "bundler",
+        "jsx": "react-jsx",
+        "allowJs": false,
+        "resolveJsonModule": true,
+        "isolatedModules": true,
+        "esModuleInterop": true,
+        "skipLibCheck": true,
+        "strict": true,
+        "noEmit": true,
 
-    "paths": {
-      "@/*": ["./src/*"],
-      "@components/*": ["./src/components/*"],
-      "@hooks/*": ["./src/hooks/*"],
-      "@pages/*": ["./src/pages/*"],
-      "@store/*": ["./src/store/*"],
-      "@types/*": ["./src/types/*"],
-      "@utils/*": ["./src/utils/*"]
-    }
-  },
-  "include": ["src"],
-  "exclude": ["node_modules", "dist"]
+        "paths": {
+            "@/*": ["./src/*"],
+            "@components/*": ["./src/components/*"],
+            "@hooks/*": ["./src/hooks/*"],
+            "@pages/*": ["./src/pages/*"],
+            "@stores/*": ["./src/stores/*"],
+            "@types/*": ["./src/types/*"],
+            "@utils/*": ["./src/utils/*"],
+            "@services/*": ["./src/services/*"],
+            "@configs/*": ["./src/configs/*"],
+            "@routes/*": ["./src/routes/*"],
+            "@lib/*": ["./src/lib/*"]
+        }
+    },
+    "include": ["src"],
+    "exclude": ["node_modules", "dist"]
 }
